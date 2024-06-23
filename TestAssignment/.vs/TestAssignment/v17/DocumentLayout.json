@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\work\\test-assignment\\TestAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\services\\dbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\services\\dbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\models\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\models\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|C:\\work\\test-assignment\\TestAssignment\\testassignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|c:\\work\\test-assignment\\testassignment\\testassignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{08753448-DFE9-41AA-AA29-CCD5E33BDF63}|TestAssignment\\TestAssignment.csproj|solutionrelative:testassignment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,6 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Services\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TestAssignment\\Services\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Services\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TestAssignment\\Services\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:03:59.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataModel.cs",
+              "DocumentMoniker": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Models\\DataModel.cs",
+              "RelativeDocumentMoniker": "TestAssignment\\Models\\DataModel.cs",
+              "ToolTip": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Models\\DataModel.cs",
+              "RelativeToolTip": "TestAssignment\\Models\\DataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:02:20.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbClient.cs",
+              "DocumentMoniker": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Services\\DbClient.cs",
+              "RelativeDocumentMoniker": "TestAssignment\\Services\\DbClient.cs",
+              "ToolTip": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\Services\\DbClient.cs",
+              "RelativeToolTip": "TestAssignment\\Services\\DbClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:00:50.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TestAssignment\\MainWindow.xaml",
@@ -34,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TestAssignment\\MainWindow.xaml.cs",
               "ToolTip": "C:\\work\\test-assignment\\TestAssignment\\TestAssignment\\MainWindow.xaml.cs",
               "RelativeToolTip": "TestAssignment\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T07:24:37.105Z",
               "EditorCaption": ""

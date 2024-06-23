@@ -9,7 +9,7 @@ namespace TestAssignment
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("@Server=DESKTOP-4HEINNT;Database=TestAssignmentDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-4HEINNT;Database=TestAssignmentDb;Trusted_Connection=True;");
         }
     }
 }
