@@ -11,7 +11,19 @@
                   VerticalAlignment="Center"
                   CanUserResizeColumns="False"
                   CanUserResizeRows="False"
-                  CanUserSortColumns="False">
+                  CanUserSortColumns="False"
+                  ItemsSource="{Binding dataModels}">
         </DataGrid>
+
+        <Button x:Name="AddButton"
+                Margin="20"
+                Height="50"
+                Width="120"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Content="Add"
+                Command="{Binding AddCommand}">
+            
+        </Button>
     </Grid>
 </Window>

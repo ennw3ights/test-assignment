@@ -1,17 +1,19 @@
 ﻿using System.Windows;
-using TestAssignment.Services;
+using TestAssignment.ViewModels;
+using TestAssignment.Views;
 
 namespace TestAssignment
 {
     public partial class MainWindow : Window
     {
-        DbClient client = new DbClient();
-
         public MainWindow()
         {
             InitializeComponent();
 
-            dataTable.ItemsSource = client.LoadContext();
+            DataContext = new ApplicationViewModel();
+
+            DataModelLineChart dataModelLineChart = new DataModelLineChart();
+            dataModelLineChart.ShowDialog();
         }
     }
 }

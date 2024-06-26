@@ -20,7 +20,7 @@ namespace TestAssignment.Services
             return dbContext.DataTable.Local.ToObservableCollection();
         }
 
-        public void CreateDataModel(DataModel model) 
+        public void AddDataModel(DataModel model) 
         { 
             dbContext.DataTable.Add(model);
             dbContext.SaveChanges();
@@ -29,11 +29,13 @@ namespace TestAssignment.Services
         public void UpdateDataModel(DataModel model) 
         { 
             dbContext.DataTable.Update(model);
+            dbContext.SaveChanges();
         }
 
         public void RemoveDataModel(DataModel model) 
         {
             dbContext.DataTable.Remove(model);
+            dbContext.SaveChanges();
         }
     }
 }

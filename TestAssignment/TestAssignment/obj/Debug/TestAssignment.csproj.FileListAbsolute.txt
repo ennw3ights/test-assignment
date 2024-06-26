@@ -92,3 +92,7 @@ C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\ru\Microsoft.Dat
 C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\TestAssi.460BE917.Up2Date
+C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelCreationWindow.g.cs
+C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelCreationWindow.baml
+C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelLineChartWindow.g.cs
+C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelLineChartWindow.baml
