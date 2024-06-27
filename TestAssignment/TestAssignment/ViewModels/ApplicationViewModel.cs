@@ -12,8 +12,9 @@ namespace TestAssignment.ViewModels
     {
         private DbClient dbClient = new DbClient();
 
-        private DataModel _selectedModel;
+        BackgroundWorker worker = new BackgroundWorker();
 
+        private DataModel _selectedModel;
         public ObservableCollection<DataModel> dataModels { get; set; }
 
         public DataModel SelectedModel
@@ -27,6 +28,13 @@ namespace TestAssignment.ViewModels
         }
 
         public ApplicationViewModel()
+        {
+            worker.DoWork += Worker_LoadDataContext;
+
+            worker.RunWorkerAsync();
+        }
+
+        private void Worker_LoadDataContext(object sender, DoWorkEventArgs e)
         {
             dataModels = dbClient.LoadContext();
         }
@@ -43,7 +51,6 @@ namespace TestAssignment.ViewModels
                         if(dataModelCreationWindow.ShowDialog() == true)
                         {
                             DataModel dataModel = dataModelCreationWindow.DataModel;
-
                             dbClient.AddDataModel(dataModel);
                         }
                     }));
@@ -67,6 +74,7 @@ namespace TestAssignment.ViewModels
                             if (dataModels[i].MachineNumber == selectedModel.MachineNumber)
                             {
                                 lineChartViewModel.GrossDates.Add(dataModels[i].GrossDate);
+                                lineChartViewModel.GrossDates.Sort();
                                 lineChartViewModel.GrossWeights.Add(dataModels[i].GrossWeight);
                             }
                         }

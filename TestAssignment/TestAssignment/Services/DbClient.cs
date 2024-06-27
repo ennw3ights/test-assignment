@@ -8,6 +8,8 @@ namespace TestAssignment.Services
     {
         ApplicationDbContext dbContext = new ApplicationDbContext();
 
+        ObservableCollection<DataModel> models = new ObservableCollection<DataModel>();
+
         public DbClient()
         {
             dbContext.Database.EnsureCreated();
@@ -23,18 +25,6 @@ namespace TestAssignment.Services
         public void AddDataModel(DataModel model) 
         { 
             dbContext.DataTable.Add(model);
-            dbContext.SaveChanges();
-        }
-
-        public void UpdateDataModel(DataModel model) 
-        { 
-            dbContext.DataTable.Update(model);
-            dbContext.SaveChanges();
-        }
-
-        public void RemoveDataModel(DataModel model) 
-        {
-            dbContext.DataTable.Remove(model);
             dbContext.SaveChanges();
         }
     }
