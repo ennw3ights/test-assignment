@@ -96,3 +96,6 @@ C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelC
 C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelCreationWindow.baml
 C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelLineChartWindow.g.cs
 C:\work\test-assignment\TestAssignment\TestAssignment\obj\Debug\Views\DataModelLineChartWindow.baml
+C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\work\test-assignment\TestAssignment\TestAssignment\bin\Debug\Microsoft.Xaml.Behaviors.xml

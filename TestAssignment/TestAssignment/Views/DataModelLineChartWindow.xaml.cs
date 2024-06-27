@@ -1,28 +1,20 @@
 ﻿using System.Windows;
-
-using DataVisualization = System.Windows.Forms.DataVisualization;
+using TestAssignment.ViewModels;
 
 namespace TestAssignment.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для DataModelLineChart.xaml
-    /// </summary>
     public partial class DataModelLineChart : Window
     {
-        public DataModelLineChart()
+        public DataModelLineChart(LineChartViewModel lineChartViewModel)
         {
             InitializeComponent();
 
             Chart1.Series[0].Points.Clear();
 
-            string label1 = "22.5.10";
-            double value1 = 1.2;
-
-            string label2 = "22.3.12";
-            double value2 = 1.5;
-
-            Chart1.Series[0].Points.Add(value1).AxisLabel = label1;
-            Chart1.Series[0].Points.Add(value2).AxisLabel = label2;
+            for (int i = 0; i < lineChartViewModel.GrossWeights.Count; i++) 
+            {
+                Chart1.Series[0].Points.Add(lineChartViewModel.GrossWeights[i]).AxisLabel = lineChartViewModel.GrossDates[i].ToString();
+            }
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using TestAssignment.ViewModels;
-using TestAssignment.Views;
 
 namespace TestAssignment
 {
@@ -11,9 +10,6 @@ namespace TestAssignment
             InitializeComponent();
 
             DataContext = new ApplicationViewModel();
-
-            DataModelLineChart dataModelLineChart = new DataModelLineChart();
-            dataModelLineChart.ShowDialog();
         }
     }
 }

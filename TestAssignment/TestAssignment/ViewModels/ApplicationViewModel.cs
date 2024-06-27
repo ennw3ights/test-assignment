@@ -1,43 +1,78 @@
-﻿using System;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Collections.ObjectModel;
-using TestAssignment.Models;
 using TestAssignment.Common;
-using Microsoft.EntityFrameworkCore;
-using TestAssignment.Views;
+using TestAssignment.Models;
 using TestAssignment.Services;
+using TestAssignment.Views;
 
 namespace TestAssignment.ViewModels
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private ApplicationDbContext dbContext = new ApplicationDbContext();
-
         private DbClient dbClient = new DbClient();
 
+        private DataModel _selectedModel;
+
         public ObservableCollection<DataModel> dataModels { get; set; }
+
+        public DataModel SelectedModel
+        {
+            get { return _selectedModel; }
+            set 
+            { 
+                _selectedModel = value; 
+                OnPropertyChanged("SelectedModel");
+            }
+        }
 
         public ApplicationViewModel()
         {
             dataModels = dbClient.LoadContext();
         }
 
-        private RelayCommand addCommand;
+        private RelayCommand _addCommand;
         public RelayCommand AddCommand
         {
             get 
             {
-                return addCommand ?? 
-                    (addCommand = new RelayCommand(obj => 
+                return _addCommand ?? 
+                    (_addCommand = new RelayCommand(obj => 
                     {
-                        DataModelCreationWindow dataModelCreationWindow = new DataModelCreationWindow(new DataModel());
+                        DataModelCreationWindow dataModelCreationWindow = new DataModelCreationWindow(new DataViewModel(new DataModel()));
                         if(dataModelCreationWindow.ShowDialog() == true)
                         {
-                            DataModel dataModel = dataModelCreationWindow._dataModel;
+                            DataModel dataModel = dataModelCreationWindow.DataModel;
 
                             dbClient.AddDataModel(dataModel);
                         }
+                    }));
+            }
+        }
+
+        private RelayCommand _openLineChart;
+        public RelayCommand OpenLineChart
+        {
+            get 
+            {
+                return _openLineChart ?? 
+                    (_openLineChart = new RelayCommand(obj => 
+                    {
+                        DataModel selectedModel = obj as DataModel;
+
+                        LineChartViewModel lineChartViewModel = new LineChartViewModel();
+
+                        for (int i = 0; i < dataModels.Count; i++) 
+                        {
+                            if (dataModels[i].MachineNumber == selectedModel.MachineNumber)
+                            {
+                                lineChartViewModel.GrossDates.Add(dataModels[i].GrossDate);
+                                lineChartViewModel.GrossWeights.Add(dataModels[i].GrossWeight);
+                            }
+                        }
+
+                        DataModelLineChart dataModelLineChartWindow = new DataModelLineChart(lineChartViewModel);
+                        dataModelLineChartWindow.ShowDialog();
                     }));
             }
         }

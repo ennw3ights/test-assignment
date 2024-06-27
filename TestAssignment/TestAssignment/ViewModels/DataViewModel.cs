@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TestAssignment.Models;
 
@@ -7,19 +8,29 @@ namespace TestAssignment.ViewModels
 {
     public class DataViewModel : INotifyPropertyChanged
     {
-        DataModel DataModel;
+        public DataModel DataModel;
 
         public DataViewModel(DataModel dataModel)
         {
             DataModel = dataModel;
         }
 
-        public int MachineId
+        public int Id 
+        { 
+            get { return DataModel.Id; }
+            set 
+            { 
+                DataModel.Id = value;
+                OnPropertyChanged("Id");
+            }
+        }
+
+        public string MachineNumber
         {
-            get { return DataModel.MachineId; }
+            get { return DataModel.MachineNumber; }
             set 
             {
-                DataModel.MachineId = value; 
+                DataModel.MachineNumber = value; 
                 OnPropertyChanged("MachineId");
             } 
         }
@@ -28,9 +39,9 @@ namespace TestAssignment.ViewModels
         {
             get { return DataModel.GrossWeight; }
             set 
-            { 
-                DataModel.GrossWeight = value; 
-                OnPropertyChanged("GrossWeight"); 
+            {
+                DataModel.GrossWeight = value;
+                OnPropertyChanged("GrossWeight");
             }
         }
 
@@ -44,6 +55,16 @@ namespace TestAssignment.ViewModels
             }
         }
 
+        public DateTimeOffset TareDate
+        {
+            get { return DataModel.TareDate; }
+            set
+            {
+                DataModel.TareDate = value;
+                OnPropertyChanged("TareDate");
+            }
+        }
+
         public double NetWeight
         {
             get { return DataModel.NetWeight; }
@@ -51,26 +72,6 @@ namespace TestAssignment.ViewModels
             { 
                 DataModel.NetWeight = value;
                 OnPropertyChanged("NetWeight"); 
-            }
-        }
-
-        public DateTimeOffset TareDate
-        {
-            get { return DataModel.TareDate; }
-            set 
-            {
-                DataModel.TareDate = value; 
-                OnPropertyChanged("TareDate"); 
-            }
-        }
-
-        public DateTimeOffset GrossDate
-        {
-            get { return DataModel.GrossDate; }
-            set 
-            { 
-                DataModel.GrossDate = value;
-                OnPropertyChanged("GrossDate");
             }
         }
 

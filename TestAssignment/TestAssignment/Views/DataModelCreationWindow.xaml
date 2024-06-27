@@ -27,29 +27,32 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Номер машины" />
-        <TextBlock Text="Вес брутто" Grid.Row="1"/>
-        <TextBlock Text="Вес тары" Grid.Row="2" />
-        <TextBlock Text="Вес нетто" Grid.Row="3" />
-        <TextBlock Text="Дата тары" Grid.Row="4" />
-        <TextBlock Text="Дата брутто" Grid.Row="5" />
+        <TextBlock Text="Id" />
+        <TextBlock Text="Номер машины" Grid.Row="1"/>
+        <TextBlock Text="Вес брутто" Grid.Row="2"/>
+        <TextBlock Text="Дата брутто" Grid.Row="3" />
+        <TextBlock Text="Вес тары" Grid.Row="4" />
+        <TextBlock Text="Дата тары" Grid.Row="5" />
+        <TextBlock Text="Вес нетто" Grid.Row="6" />
 
-        <TextBox Text="{Binding MachineId}" Grid.Column="1" />
-        <TextBox Text="{Binding GrossWeight}" Grid.Column="1" Grid.Row="1" />
-        <TextBox Text="{Binding TareWeight}" Grid.Column="1" Grid.Row="2" />
-        <TextBox Text="{Binding NetWeight}" Grid.Column="1" Grid.Row="3" />
-        <TextBox Text="{Binding TareDate}" Grid.Column="1" Grid.Row="4" />
-        <TextBox Text="{Binding GrossWeight}" Grid.Column="1" Grid.Row="5" />
+        <TextBox Text="{Binding Id}" Grid.Column="1" />
+        <TextBox Text="{Binding MachineNumber}" Grid.Column="1" Grid.Row="1"/>
+        <TextBox Text="{Binding GrossWeight}" Grid.Column="1" Grid.Row="2" />
+        <TextBox Text="{Binding GrossDate}" Grid.Column="1" Grid.Row="3" />
+        <TextBox Text="{Binding TareWeight}" Grid.Column="1" Grid.Row="4" />
+        <TextBox Text="{Binding TareDate}" Grid.Column="1" Grid.Row="5" />
+        <TextBox Text="{Binding NetWeight}" Grid.Column="1" Grid.Row="6" />
 
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="6" Grid.Column="1">
-            <Button IsDefault="True" Click="AcceptClick" >OK</Button>
-            <Button IsCancel="True" >Отмена</Button>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
+            <Button IsDefault="True" Click="AcceptClick">Сохранить</Button>
+            <Button IsCancel="True">Отмена</Button>
         </StackPanel>
     </Grid>
 </Window>

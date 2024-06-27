@@ -1,19 +1,17 @@
 ﻿using System.Windows;
 using TestAssignment.Models;
+using TestAssignment.ViewModels;
 
 namespace TestAssignment.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для DataModelCreationWindow.xaml
-    /// </summary>
     public partial class DataModelCreationWindow : Window
     {
-        public DataModel _dataModel { get; private set; }
-        public DataModelCreationWindow(DataModel dataModel)
+        public DataModel DataModel { get; private set; }
+        public DataModelCreationWindow(DataViewModel dataViewModel)
         {
             InitializeComponent();
-            _dataModel = dataModel;
-            DataContext = _dataModel;
+            DataModel = dataViewModel.DataModel;
+            DataContext = DataModel;
         }
 
         void AcceptClick(object sender, RoutedEventArgs e)

@@ -1,37 +1,60 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 namespace TestAssignment.Models
 {
     public sealed class DataModel : INotifyPropertyChanged
     {
-        private int _machineId;
+        private int _id;
+        private string _machineNumber;
         private double _grossWeight;
-        private double _tareWeight;
-        private double _netWeight;
-        private DateTimeOffset _tareDate;
         private DateTimeOffset _grossDate;
+        private double _tareWeight;
+        private DateTimeOffset _tareDate;
+        private double _netWeight;
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int MachineId 
+        public int Id 
         { 
-            get { return _machineId; }
+            get { return _id; } 
+            set 
+            { 
+                _id = value; 
+                OnPropertyChanged("Id");
+            }
+        }
+        
+        public string MachineNumber 
+        { 
+            get { return _machineNumber; }
             set 
             {
-                _machineId = value;
-                OnPropertyChanged("MachineId");
+                _machineNumber = value;
+                OnPropertyChanged("MachineNumber");
             }
         }
 
-        public double GrossWeight 
-        { 
-            get { return _grossWeight; }
+        public double GrossWeight
+        {
+            get { return _grossWeight;  }
+            set
+            {
+                _grossWeight = value;
+                OnPropertyChanged("GrossWeight");
+            }
+        }
+
+        public DateTimeOffset GrossDate
+        {
+            get { return _grossDate; }
             set 
-            { 
-                _grossWeight = value; 
-                OnPropertyChanged("GrossWeight"); 
+            {
+                _grossDate = value;
+                OnPropertyChanged("GrossDate");
             }
         }
 
@@ -45,6 +68,16 @@ namespace TestAssignment.Models
             }
         }
 
+        public DateTimeOffset TareDate
+        {
+            get { return _tareDate; }
+            set
+            {
+                _tareDate = value;
+                OnPropertyChanged("TareDate");
+            }
+        }
+
         public double NetWeight 
         { 
             get { return _netWeight; }
@@ -55,29 +88,7 @@ namespace TestAssignment.Models
             }
         }
 
-        public DateTimeOffset TareDate 
-        { 
-            get { return _tareDate; } 
-            set 
-            { 
-                _tareDate = value; 
-                OnPropertyChanged("TareDate"); 
-            }
-        }
-
-        public DateTimeOffset GrossDate 
-        { 
-            get { return _grossDate; } 
-            set 
-            { 
-                _grossDate = value;
-                OnPropertyChanged("GrossDate");
-
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
